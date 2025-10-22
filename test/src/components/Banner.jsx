@@ -14,6 +14,11 @@ import Iridescence from './Iridescence';
 import TextTrail from './TextTrail';
 import TextCursor from './TextCursor';
 import Lanyard from './Lanyard';
+import ScrollStack, { ScrollStackItem } from './ScrollStack';
+import MagicBento from './MagicBento';
+import LiquidChrome from './LiquidChrome';
+import CircularGallery from './CircularGallery';
+import FluidGlass from './FluidGlass';
 
 const Banner = () => {
 
@@ -145,7 +150,50 @@ const Banner = () => {
                 <Particles />
             </div>
 
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+            <div style={{ width: '100%', height: '750px', position: 'relative' }}>
+                <div className='h-full w-full absolute flex items-center justify-center'>
+                    <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                </div>
+                <LiquidChrome
+                    baseColor={[0.1, 0.1, 0.1]}
+                    speed={1}
+                    amplitude={0.6}
+                    interactive={true}
+                />
+            </div>
+            <div className='h-full w-full justify-center items-center flex'>
+                <MagicBento
+                    textAutoHide={true}
+                    enableStars={true}
+                    enableSpotlight={true}
+                    enableBorderGlow={true}
+                    enableTilt={true}
+                    enableMagnetism={true}
+                    clickEffect={true}
+                    spotlightRadius={300}
+                    particleCount={12}
+                    glowColor="132, 0, 255"
+                />
+            </div>
+
+            <div style={{ height: '600px', position: 'relative' }}>
+                <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
+            </div>
+
+            <div style={{ height: '600px', position: 'relative' }}>
+                <FluidGlass
+                    mode="lens" // or "bar", "cube"
+                    lensProps={{
+                        scale: 0.25,
+                        ior: 1.15,
+                        thickness: 5,
+                        chromaticAberration: 0.1,
+                        anisotropy: 0.01
+                    }}
+                    barProps={{}} // add specific props if using bar mode
+                    cubeProps={{}} // add specific props if using cube mode
+                />
+            </div>
         </div>
 
 
