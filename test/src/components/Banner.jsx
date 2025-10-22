@@ -10,6 +10,9 @@ import Galaxy from './Galaxy';
 import FuzzyText from './FuzzyText';
 import Particles from './Particles';
 import TextPressure from './TextPressure';
+import Iridescence from './Iridescence';
+import TextTrail from './TextTrail';
+import TextCursor from './TextCursor';
 
 const Banner = () => {
 
@@ -101,7 +104,26 @@ const Banner = () => {
                 </div>
                 <Galaxy />
             </div>
-
+            <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+                <div className='absolute z-0 w-full h-full flex justify-center items-center'>
+                    <TextCursor
+                        text="ROGER"
+                        delay={0.01}
+                        spacing={80}
+                        followMouseDirection={true}
+                        randomFloat={true}
+                        exitDuration={0.3}
+                        removalInterval={20}
+                        maxPoints={10}
+                    />
+                </div>
+                <Iridescence
+                    color={[1, 1, 1]}
+                    mouseReact={false}
+                    amplitude={0.1}
+                    speed={1.0}
+                />
+            </div>
             <div style={{ width: '100%', height: '600px', position: 'relative' }}>
                 <div className='absolute z-0 w-full h-full flex justify-center items-center'>
                     <div style={{ position: 'relative', height: '500px' }}>
