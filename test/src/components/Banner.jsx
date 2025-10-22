@@ -8,6 +8,8 @@ import LiquidEther from './LiquidEther';
 import ShinyText from './ShinyText';
 import Galaxy from './Galaxy';
 import FuzzyText from './FuzzyText';
+import Particles from './Particles';
+import TextPressure from './TextPressure';
 
 const Banner = () => {
 
@@ -98,6 +100,26 @@ const Banner = () => {
                     </FuzzyText>
                 </div>
                 <Galaxy />
+            </div>
+
+            <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+                <div className='absolute z-0 w-full h-full flex justify-center items-center'>
+                    <div style={{ position: 'relative', height: '500px' }}>
+                        <TextPressure
+                            text="Hello!"
+                            flex={true}
+                            alpha={false}
+                            stroke={false}
+                            width={true}
+                            weight={true}
+                            italic={true}
+                            textColor="#ffffff"
+                            strokeColor="#ff0000"
+                            minFontSize={400}
+                        />
+                    </div>
+                </div>
+                <Particles />
             </div>
         </div>
 
