@@ -13,6 +13,7 @@ import TextPressure from './TextPressure';
 import Iridescence from './Iridescence';
 import TextTrail from './TextTrail';
 import TextCursor from './TextCursor';
+import Lanyard from './Lanyard';
 
 const Banner = () => {
 
@@ -30,7 +31,7 @@ const Banner = () => {
                         animateBy="words"
                         direction="top"
                         onAnimationComplete={handleAnimationComplete}
-                        className="text-5xl font-bold mb-8"
+                        className="text-5xl font-bold mb-8 text-white"
                     />
                 </div>
                 <GradientBlinds
@@ -107,7 +108,7 @@ const Banner = () => {
             <div style={{ width: '100%', height: '600px', position: 'relative' }}>
                 <div className='absolute z-0 w-full h-full flex justify-center items-center'>
                     <TextCursor
-                        text="ROGER"
+                        text="FONDO 5"
                         delay={0.01}
                         spacing={80}
                         followMouseDirection={true}
@@ -126,7 +127,7 @@ const Banner = () => {
             </div>
             <div style={{ width: '100%', height: '600px', position: 'relative' }}>
                 <div className='absolute z-0 w-full h-full flex justify-center items-center'>
-                    <div style={{ position: 'relative', height: '500px' }}>
+                    <div style={{ position: 'relative', height: '100px' }}>
                         <TextPressure
                             text="Hello!"
                             flex={true}
@@ -137,12 +138,14 @@ const Banner = () => {
                             italic={true}
                             textColor="#ffffff"
                             strokeColor="#ff0000"
-                            minFontSize={400}
+                            minFontSize={100}
                         />
                     </div>
                 </div>
                 <Particles />
             </div>
+
+            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
 
 

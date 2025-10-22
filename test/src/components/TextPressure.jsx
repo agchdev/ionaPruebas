@@ -181,7 +181,7 @@ const TextPressure = ({
           transform: `scale(1, ${scaleY})`,
           transformOrigin: 'center top',
           margin: 0,
-          fontWeight: 400,
+          fontWeight: 150,
           color: stroke ? undefined : textColor
         }}
       >
